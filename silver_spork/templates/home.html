@@ -118,7 +118,7 @@
           <img class="card-img-top" src="{{crs.img.url}}" alt="Card image" style="width:100%; height: 30vh;">
           <div class="card-body">
             <h4 class="card-title">{{crs.c_name}}</h4>
-            <a href="courses"></a>
+            <!-- <a href="courses"></a> -->
             <!-- <h4 class="card-title">Duration: {{crs.duration}} Month</h4>
             <div style="display: flex;">
               <h4 class="card-title" style="display: flex;">Fees:</h4> <h4 style="text-decoration: line-through; "> ₹{{crs.Course_fees}}</h4>  <h4>₹{{crs.offer_fees}} </h4>
@@ -130,8 +130,9 @@
       </div>
         {% endfor %}
     </div>
-    <button type="button" class="btn btn-outline-danger" >Show More</button>
-
+    <div class="d-flex justify-content-center align-items-center" style="margin-top: 20px;">
+      <a href="courses"><button type="button" class="btn btn-outline-danger" >Show More</button></a>
+    </div>
 </div>
     
 </body>
