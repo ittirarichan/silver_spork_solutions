@@ -20,6 +20,10 @@ def courses(req):
     return render (req,'courses.html',{'courses':data})
 
 
+def view_courses(req,c_id):
+    data=Course.objects.get(pk=c_id)
+    return render(req,'view_courses.html',{'courses':data})
+
 
 def contact(req):
     if req.method=='POST':

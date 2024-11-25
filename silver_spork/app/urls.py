@@ -6,4 +6,6 @@ urlpatterns=[
     path('courses',views.courses),
     path('contact',views.contact),
     path('about',views.about),
+    path('view_courses/<c_id>',views.view_courses),
+
     ]

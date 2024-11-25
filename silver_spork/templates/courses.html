@@ -32,16 +32,16 @@
     <div class="row">
       {% for crs in courses %}
       <div class="col-md-4">
-        <!-- <a href="view_product/{{pro.pk}}"> -->
+        <a href="view_courses/{{crs.pk}}">
           <div class="card">
             <img class="card-img-top" src="{{crs.img.url}}" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">{{crs.c_name}}</h4>
-              <h4 class="card-title">Duration: {{crs.duration}} Month</h4>
+              <!-- <h4 class="card-title">Duration: {{crs.duration}} Month</h4> -->
               <div style="display: flex;">
-                <h4 class="card-title" style="display: flex;">Fees:</h4> <h4 style="text-decoration: line-through; "> ₹{{crs.Course_fees}}</h4>  <h4>₹{{crs.offer_fees}} </h4>
+                <!-- <h4 class="card-title" style="display: flex;">Fees:</h4> <h4 style="text-decoration: line-through; "> ₹{{crs.Course_fees}}</h4>  <h4>₹{{crs.offer_fees}} </h4> -->
               </div>
-              <p class="card-text">{{crs.dis}}</p>
+              <!-- <p class="card-text">{{crs.dis}}</p> -->
             </div>
           </div>
         </a>
