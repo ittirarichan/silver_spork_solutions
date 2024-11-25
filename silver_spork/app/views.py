@@ -5,7 +5,8 @@ from .models import *
 
 # Create your views here.
 def home(req):    
-    return render(req,'home.html')
+    data=Course.objects.all()[:3]
+    return render(req,'home.html',{'courses':data})
     
 def contact(req):
     return render(req,'contact.html')

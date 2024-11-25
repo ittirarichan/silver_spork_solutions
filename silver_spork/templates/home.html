@@ -11,23 +11,9 @@
 </head>
 <body>
 
-  <!-- <header>
-    <div class="container">
-      <h1 class="logo">SILVER SPORK SOLUTIONS</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="">Home</a></li>
-          <li><a href="courses">Courses</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="contact">Contact</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </header> -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+      <a class="navbar-brand" href="javascript:void(0)">SILVER SPORK SOLUTIONS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -123,47 +109,29 @@
     <span>1000s of people</span> from different backgrounds to build their career as <span> software engineers</span></h1>
 </div>
 
+<div class="section" id="products">
+  <div class="row">
+    {% for crs in courses %}
+    <div class="col-md-4">
+      <!-- <a href="view_product/{{pro.pk}}"> -->
+        <div class="card" style="height: 42vh;">
+          <img class="card-img-top" src="{{crs.img.url}}" alt="Card image" style="width:100%; height: 30vh;">
+          <div class="card-body">
+            <h4 class="card-title">{{crs.c_name}}</h4>
+            <a href="courses"></a>
+            <!-- <h4 class="card-title">Duration: {{crs.duration}} Month</h4>
+            <div style="display: flex;">
+              <h4 class="card-title" style="display: flex;">Fees:</h4> <h4 style="text-decoration: line-through; "> ₹{{crs.Course_fees}}</h4>  <h4>₹{{crs.offer_fees}} </h4>
+            </div>
+            <p class="card-text">{{crs.dis}}</p> -->
+          </div>
+        </div>
+      </a>
+      </div>
+        {% endfor %}
+    </div>
+    <button type="button" class="btn btn-outline-danger" >Show More</button>
 
-<div class="container" style="width: 90%; margin: auto; margin-top: 40px;">
-  <h1>Technology Stack</h1>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="{% static 'images/angular.png' %}" class="card-img-top"style="height: 50vh;" alt="...">
-      <div class="card-body">
-        <h3 class="card-title">ANGULAR</h3>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="{% static 'images/devops.jpg' %}" class="card-img-top"style="height: 50vh;" alt="...">
-      <div class="card-body">
-        <h3 class="card-title">DEVOPS</h3>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="{% static 'images/github.jpg' %}" class="card-img-top"style="height: 50vh;" alt="...">
-      <div class="card-body">
-        <h3 class="card-title">GITHUB</h3>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="{% static 'images/react.png' %}" class="card-img-top" style="height: 50vh;" alt="...">
-      <div class="card-body">
-        <h3 class="card-title">REACT JS</h3>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
     
 </body>
