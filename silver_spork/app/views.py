@@ -4,7 +4,7 @@ from .models import *
 
 
 # Create your views here.
-def home(req):
+def home(req):    
     return render(req,'home.html')
     
 def contact(req):
@@ -15,19 +15,19 @@ def about(req):
 
 
 def courses(req):
-    # if 'user' in req.session:
     data=Course.objects.all()
     return render (req,'courses.html',{'courses':data})
-    # else:
-        # return redirect(home)
+
 
 
 def contact(req):
-    # if 'shop' in req.session:
-    if req.method=='POST'():
+    if req.method=='POST':
         name=req.POST['name']
         email=req.POST['email']
         message=req.POST['message']
         data=Contact.objects.create(name=name,email=email,message=message)
         data.save()
+        return redirect(contact)
+    else:
         return render (req,'contact.html')
+    

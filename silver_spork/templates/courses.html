@@ -17,10 +17,10 @@
       <h1 class="logo">SILVER SPORK SOLUTIONS</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="home">Home</a></li>
+          <li><a href="../">Home</a></li>
           <li><a href="courses">Courses</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li><a href="../about">About</a></li>
+          <li><a href="../contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -37,8 +37,10 @@
             <img class="card-img-top" src="{{crs.img.url}}" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">{{crs.c_name}}</h4>
-              <h4 class="card-title">Duration: {{crs.duration}}</h4>
-              <h4 class="card-title">Fees: ₹{{crs.Course_fees}}  ₹{{crs.offer_fees}} </h4>
+              <h4 class="card-title">Duration: {{crs.duration}} Month</h4>
+              <div style="display: flex;">
+                <h4 class="card-title" style="display: flex;">Fees:</h4> <h4 style="text-decoration: line-through; "> ₹{{crs.Course_fees}}</h4>  <h4>₹{{crs.offer_fees}} </h4>
+              </div>
               <p class="card-text">{{crs.dis}}</p>
             </div>
           </div>
